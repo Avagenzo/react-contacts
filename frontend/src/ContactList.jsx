@@ -12,18 +12,19 @@ const ContactList = ({ contacts, updateContact, updateCallback }) => {
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbo>
+            <tbody>
                 {contacts.map((contact) => (
                     <tr key={contact.id}>
                         <td>{contact.firstName}</td>
                         <td>{contact.lastName}</td>
-                        <td>{contact.email}
+                        <td>{contact.email}</td>
+                        <td>
                             <button onClick={() => updateContact(contact)}>Update</button>
                             <button>Delete</button>
                         </td>
                     </tr>
                 ))}
-            </tbo>
+            </tbody>
         </table>
     </div>
 }
